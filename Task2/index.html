@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تسجيل طالب جامعي</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>تسجيل طالب جامعي</h1>
+        
+        <form id="registrationForm" action="submit.php" method="post">
+            <!-- الكتلة 1: المعلومات الشخصية -->
+            <fieldset>
+                <legend>المعلومات الشخصية</legend>
+                <div class="form-group">
+                    <label>الاسم <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>اسم الأب <span class="required">*</span></label>
+                    <input type="text" id="fatherName" name="fatherName" required>
+                </div>
+                <div class="form-group">
+                    <label>الكنية <span class="required">*</span></label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label>اسم الأم <span class="required">*</span></label>
+                    <input type="text" id="motherName" name="motherName" required>
+                </div>
+                <div class="form-group">
+                    <label>الجنس <span class="required">*</span></label>
+                    <select id="gender" name="gender" required>
+                        <option value="">اختر</option>
+                        <option value="male">ذكر</option>
+                        <option value="female">أنثى</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>الرقم الجامعي <span class="required">*</span></label>
+                    <input type="text" id="universityId" name="universityId" required>
+                </div>
+            </fieldset>
+            
+            <!-- الكتلة 2: معلومات الاتصال -->
+            <fieldset>
+                <legend>معلومات الاتصال</legend>
+                <div class="form-group">
+                    <label>رقم الهاتف <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label>البريد الإلكتروني <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>المحافظة <span class="required">*</span></label>
+                    <input type="text" id="governorate" name="governorate" required>
+                </div>
+                <div class="form-group">
+                    <label>المدينة <span class="required">*</span></label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label>العنوان التفصيلي <span class="required">*</span></label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+            </fieldset>
+            
+            <!-- الكتلة 3: المعلومات الدراسية -->
+            <fieldset>
+                <legend>المعلومات الدراسية</legend>
+                <div class="form-group">
+                    <label>الفرع <span class="required">*</span></label>
+                    <input type="text" id="Branch" name="Branch" required>
+
+                </div>
+                <div class="form-group">
+                    <label>المعدل الإجمالي <span class="required">*</span></label>
+                    <input type="number" id="totalGrade" name="totalGrade" min="0" max="100" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label>معدل الثانوية <span class="required">*</span></label>
+                    <input type="number" id="highSchoolGrade" name="highSchoolGrade" min="0" max="100" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label>مصدر الشهادة <span class="required">*</span></label>
+                    <input type="text" id="certificateSource" name="certificateSource" required>
+                </div>
+                <div class="form-group">
+                    <label>رقم الاكتتاب بالثانوية <span class="required">*</span></label>
+                    <input type="text" id="subscriptionNumber" name="subscriptionNumber" pattern="[0-9]{10}" title="يجب إدخال 10 أرقام فقط" required>
+                </div>
+            </fieldset>
+            
+            <button type="submit" class="submit-btn">إرسال</button>
+        </form>
+    </div>
+</body>
+</html>
